@@ -13,7 +13,7 @@ namespace RegularExpressions
         {
             Console.WriteLine("....REGULAR EXPRESSSIONS.....");
             Console.WriteLine("choose the options");
-            Console.WriteLine("\n1:Matches A \n2:LowerCase Sequence \n3:HTML Tag \n4:Occurance \n22:Default:");
+            Console.WriteLine("\n1:Matches A \n2:LowerCase Sequence \n3:HTML Tag \n4:Occurance \n5:Image Type\n22:Default:");
             int choose = Convert.ToInt32(Console.ReadLine());
             switch (choose)
             {
@@ -28,6 +28,9 @@ namespace RegularExpressions
                     break;
                 case 4:
                     Patterns.Occurences();
+                    break;
+                case 5:
+                    Patterns.ImageType();
                     break;
                 default:
                     Console.WriteLine("Enter the Above option");
