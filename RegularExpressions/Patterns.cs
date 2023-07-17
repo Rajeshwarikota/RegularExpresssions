@@ -43,5 +43,17 @@ namespace RegularExpressions
                 Console.WriteLine("Input string not matches the pattern");
             }
         }
+        public static void HTMLTag()
+        {
+            string input = "<p>The <code>Regex</code> is a compiled representation of a regular expression.</p>";
+            string pattern = "<[^>]+>";
+            Regex regex = new Regex(pattern);
+            MatchCollection matches = regex.Matches(input);
+
+            foreach (Match match in matches)
+            {
+                Console.WriteLine(match.Value);
+            }
+        }
     }
 }
